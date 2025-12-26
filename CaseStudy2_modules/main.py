@@ -5,9 +5,11 @@ import student_mgmt.student as student
 from student_mgmt import marks, attendance, fees, report
 
 
+
+
 def main():
     while True:
-        print("\n=== STUDENT SYSTEM ===")
+        print("\n----------Menu----------")
         print("1) New Admission (Add Student)")
         print("2) Existing Student (Enter SID)")
         print("3) List All Students")
@@ -15,9 +17,9 @@ def main():
         choice = input("Choose: ").strip()
 
         if choice == '1':
-            sid = input("Enter SID (e.g., S101): ").strip()
+            sid = student.generate_sid()
             name = input("Enter Name: ").strip()
-            grade = input("Enter Grade (e.g., 10): ").strip()
+            grade = input("Enter Grade or class : ").strip()
             dob = input("Enter DOB (YYYY-MM-DD): ").strip()
             try:
                 student.add_student(sid, name, grade, dob)
@@ -41,7 +43,7 @@ def main():
             else:
                 print("\n--- All Students ---")
                 for sid, data in all_s.items():
-                    print(f"{sid}: {data.get('name','')} (Grade {data.get('grade','')})")
+                    print(f"{sid}: {data.get('name','')} ({data.get('grade','')})")
                 print("--------------------")
 
         elif choice == '4':

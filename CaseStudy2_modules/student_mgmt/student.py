@@ -1,6 +1,16 @@
 
 STUDENTS = {}
 
+
+import random
+
+def generate_sid(prefix="S", width=3):
+    number = random.randint(1, 10**width - 1)
+    return f"{prefix}{number:0{width}d}"
+
+
+
+
 def add_student(sid, name, grade, dob):
     if not sid or sid.strip() == "":
         raise ValueError("Student ID cannot be empty")
