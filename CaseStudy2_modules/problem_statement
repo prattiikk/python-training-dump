@@ -1,0 +1,11 @@
+Modules Case Study
+1. Design a student management project using multiple Python modules instead of a single script.
+2. Create a user-defined module containing student functions and use it in another Python file.
+3. Develop a marks processing system using a separate marks module and import it in main program.
+4. Build a report generation module using classes and connect it to main student system.
+5. Demonstrate importing modules using import, from … import, and module alias.
+6. Create a reusable module that can be used across multiple student applications.
+7. Separate attendance, marks, student data, and fee management into different modules and integrate them.
+8. Develop a case where predefined modules like math, datetime, or random are required in student management.
+9. Create a module and print its built-in properties such as __name__, __file__, and __dict__.
+10. Build a complete student mini-project fully modular, demonstrating importance of modular programming.
